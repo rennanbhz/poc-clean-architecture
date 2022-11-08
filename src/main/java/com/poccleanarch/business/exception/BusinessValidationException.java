@@ -1,9 +1,9 @@
 package com.poccleanarch.business.exception;
 
-import com.poccleanarch.inbound.graphql.exception.ErrorType;
-import com.poccleanarch.inbound.graphql.exception.GlobalException;
-import com.poccleanarch.inbound.graphql.exception.Issue;
-import com.poccleanarch.inbound.graphql.exception.IssueEnum;
+import com.poccleanarch.entrypoint.graphql.exception.ErrorType;
+import com.poccleanarch.entrypoint.graphql.exception.GlobalException;
+import com.poccleanarch.entrypoint.graphql.exception.Issue;
+import com.poccleanarch.entrypoint.graphql.exception.IssueEnum;
 
 public class BusinessValidationException extends GlobalException {
 

@@ -1,7 +1,7 @@
 package com.poccleanarch.utils
 
 import com.poccleanarch.business.model.Category
-import com.poccleanarch.inbound.graphql.dto.input.category.CreateCategoryInput
+import com.poccleanarch.entrypoint.graphql.dto.input.category.CreateCategoryInput
 
 import static com.poccleanarch.utils.FieldConstants.*
 

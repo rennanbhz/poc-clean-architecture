@@ -1,9 +1,9 @@
-package com.poccleanarch.inbound.graphql.resolver;
+package com.poccleanarch.entrypoint.graphql.resolver;
 
 import com.poccleanarch.business.model.Category;
 import com.poccleanarch.business.usecase.CreateCategoryUseCase;
-import com.poccleanarch.inbound.graphql.assembler.CreateCategoryInputToCategoryAssembler;
-import com.poccleanarch.inbound.graphql.dto.input.category.CreateCategoryInput;
+import com.poccleanarch.entrypoint.graphql.assembler.CreateCategoryInputToCategoryAssembler;
+import com.poccleanarch.entrypoint.graphql.dto.input.category.CreateCategoryInput;
 import graphql.kickstart.tools.GraphQLMutationResolver;
 import javax.validation.Valid;
 import org.slf4j.Logger;

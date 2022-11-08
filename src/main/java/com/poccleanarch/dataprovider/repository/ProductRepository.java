@@ -1,4 +1,4 @@
-package com.poccleanarch.outbound.repository;
+package com.poccleanarch.dataprovider.repository;
 
 import com.poccleanarch.business.model.Product;
 import org.slf4j.Logger;

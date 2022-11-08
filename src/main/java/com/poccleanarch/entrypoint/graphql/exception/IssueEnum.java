@@ -1,4 +1,4 @@
-package com.poccleanarch.inbound.graphql.exception;
+package com.poccleanarch.entrypoint.graphql.exception;
 
 import java.util.IllegalFormatException;
 import org.apache.logging.log4j.LogManager;

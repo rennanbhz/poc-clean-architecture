@@ -1,9 +1,9 @@
-package com.poccleanarch.outbound.repository
+package com.poccleanarch.dataprovider.repository
 
 
 import com.poccleanarch.business.gateway.repository.CategoryRepository
 import com.poccleanarch.business.model.Category
-import com.poccleanarch.outbound.config.BaseRepositoryTest
+import com.poccleanarch.dataprovider.config.BaseRepositoryTest
 import groovy.transform.CompileDynamic
 import org.junit.After
 import org.junit.Before

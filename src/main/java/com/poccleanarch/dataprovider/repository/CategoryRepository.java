@@ -1,9 +1,9 @@
-package com.poccleanarch.outbound.repository;
+package com.poccleanarch.dataprovider.repository;
 
 import com.poccleanarch.business.exception.BusinessValidationException;
 import com.poccleanarch.business.model.Category;
-import com.poccleanarch.inbound.graphql.exception.ErrorType;
-import com.poccleanarch.inbound.graphql.exception.IssueEnum;
+import com.poccleanarch.entrypoint.graphql.exception.ErrorType;
+import com.poccleanarch.entrypoint.graphql.exception.IssueEnum;
 import java.util.Objects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

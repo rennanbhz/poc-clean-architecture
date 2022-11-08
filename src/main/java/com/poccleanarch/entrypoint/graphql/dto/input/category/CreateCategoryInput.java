@@ -1,4 +1,4 @@
-package com.poccleanarch.inbound.graphql.dto.input.category;
+package com.poccleanarch.entrypoint.graphql.dto.input.category;
 
 import static com.poccleanarch.crosscutting.InputMessagesValidation.MAXIMUM_CHARACTER_LIMIT;
 import static com.poccleanarch.crosscutting.InputMessagesValidation.MISSING_REQUIRED_VALUES;

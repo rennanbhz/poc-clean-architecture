@@ -1,7 +1,7 @@
-package com.poccleanarch.inbound.graphql.assembler;
+package com.poccleanarch.entrypoint.graphql.assembler;
 
 import com.poccleanarch.business.model.Category;
-import com.poccleanarch.inbound.graphql.dto.input.category.CreateCategoryInput;
+import com.poccleanarch.entrypoint.graphql.dto.input.category.CreateCategoryInput;
 import com.poccleanarch.service.IdService;
 import java.time.OffsetDateTime;
 import java.time.ZoneId;

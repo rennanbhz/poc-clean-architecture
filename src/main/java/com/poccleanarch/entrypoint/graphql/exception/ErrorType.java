@@ -1,4 +1,4 @@
-package com.poccleanarch.inbound.graphql.exception;
+package com.poccleanarch.entrypoint.graphql.exception;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

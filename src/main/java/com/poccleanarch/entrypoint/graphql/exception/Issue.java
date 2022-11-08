@@ -1,4 +1,4 @@
-package com.poccleanarch.inbound.graphql.exception;
+package com.poccleanarch.entrypoint.graphql.exception;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;

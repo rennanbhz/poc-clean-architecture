@@ -3,8 +3,8 @@ package com.poccleanarch.business.usecase
 import com.poccleanarch.business.exception.BusinessValidationException
 import com.poccleanarch.business.gateway.repository.CategoryRepository
 import com.poccleanarch.business.model.Category
-import com.poccleanarch.inbound.graphql.exception.ErrorType
-import com.poccleanarch.inbound.graphql.exception.IssueEnum
+import com.poccleanarch.entrypoint.graphql.exception.ErrorType
+import com.poccleanarch.entrypoint.graphql.exception.IssueEnum
 import groovy.transform.CompileDynamic
 import spock.lang.Specification
 

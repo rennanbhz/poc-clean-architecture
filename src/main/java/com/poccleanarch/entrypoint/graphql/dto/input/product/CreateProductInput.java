@@ -1,4 +1,4 @@
-package com.poccleanarch.inbound.graphql.dto.input.product;
+package com.poccleanarch.entrypoint.graphql.dto.input.product;
 
 import static com.poccleanarch.crosscutting.InputMessagesValidation.MISSING_REQUIRED_VALUES;
 

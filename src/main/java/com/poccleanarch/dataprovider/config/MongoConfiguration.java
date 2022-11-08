@@ -1,4 +1,4 @@
-package com.poccleanarch.outbound.config;
+package com.poccleanarch.dataprovider.config;
 
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.context.annotation.Bean;

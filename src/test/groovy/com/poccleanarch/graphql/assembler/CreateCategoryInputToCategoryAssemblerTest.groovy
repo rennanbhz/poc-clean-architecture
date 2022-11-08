@@ -1,6 +1,6 @@
 package com.poccleanarch.graphql.assembler
 
-import com.poccleanarch.inbound.graphql.assembler.CreateCategoryInputToCategoryAssembler
+import com.poccleanarch.entrypoint.graphql.assembler.CreateCategoryInputToCategoryAssembler
 import com.poccleanarch.service.IdService
 import groovy.transform.CompileDynamic
 import spock.lang.Specification

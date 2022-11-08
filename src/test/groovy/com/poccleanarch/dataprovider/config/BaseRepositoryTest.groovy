@@ -1,4 +1,4 @@
-package com.poccleanarch.outbound.config
+package com.poccleanarch.dataprovider.config
 
 import com.poccleanarch.business.model.Category
 import com.poccleanarch.business.model.Product

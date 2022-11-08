@@ -1,4 +1,4 @@
-package com.poccleanarch.inbound.graphql.exception;
+package com.poccleanarch.entrypoint.graphql.exception;
 
 public class GlobalException extends RuntimeException {
 

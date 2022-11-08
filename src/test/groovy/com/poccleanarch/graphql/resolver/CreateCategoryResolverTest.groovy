@@ -2,9 +2,9 @@ package com.poccleanarch.graphql.resolver
 
 import com.poccleanarch.business.model.Category
 import com.poccleanarch.business.usecase.CreateCategoryUseCase
-import com.poccleanarch.inbound.graphql.assembler.CreateCategoryInputToCategoryAssembler
-import com.poccleanarch.inbound.graphql.dto.input.category.CreateCategoryInput
-import com.poccleanarch.inbound.graphql.resolver.CreateCategoryResolver
+import com.poccleanarch.entrypoint.graphql.assembler.CreateCategoryInputToCategoryAssembler
+import com.poccleanarch.entrypoint.graphql.dto.input.category.CreateCategoryInput
+import com.poccleanarch.entrypoint.graphql.resolver.CreateCategoryResolver
 import groovy.transform.CompileDynamic
 import spock.lang.Specification
 
