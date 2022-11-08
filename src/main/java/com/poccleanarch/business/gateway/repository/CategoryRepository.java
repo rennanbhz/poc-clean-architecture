@@ -10,4 +10,6 @@ public interface CategoryRepository {
 
   void deleteCategory(String id);
 
+  boolean hasDuplicated(Category category);
+
 }

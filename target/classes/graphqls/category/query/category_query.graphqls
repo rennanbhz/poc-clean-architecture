@@ -1,0 +1,4 @@
+extend type Query {
+    # Get a Category by ID
+    category(id: UUID!): Category!
+}

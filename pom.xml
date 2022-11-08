@@ -15,27 +15,109 @@
 	<description>POC using Clean Architecture and other features as example</description>
 
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 		<server.port>8080</server.port>
-		<spock.spring.version>1.2-groovy-2.4</spock.spring.version>
-		<spock.core.version>1.2-groovy-2.4</spock.core.version>
+		<spock.spring.version>2.3-groovy-2.5</spock.spring.version>
+		<spock.core.version>2.2-groovy-3.0</spock.core.version>
 		<gmavenplus-plugin.version>1.12.1</gmavenplus-plugin.version>
 		<spring.mock.version>2.0.8</spring.mock.version>
 		<maven.invoker.version>3.1.0</maven.invoker.version>
 		<org.apache.commons.lang3.version>3.12.0</org.apache.commons.lang3.version>
 		<spotify.version>1.2.2</spotify.version>
 		<testcontainers.mongodb.version>1.16.0</testcontainers.mongodb.version>
+		<testcontainers.version>1.15.2</testcontainers.version>
 		<rest.assured.version>4.2.0</rest.assured.version>
+		<archunit.version>0.13.0</archunit.version>
 		<spring.boot.starter.data.mongodb.version>2.5.4</spring.boot.starter.data.mongodb.version>
 		<json.version>20210307</json.version>
 		<unitils.version>3.4.6</unitils.version>
 		<log4j2.version>2.15.0</log4j2.version>
+		<graphql.kickstart.version>8.1.1</graphql.kickstart.version>
+		<graphql.extended.scalars.version>15.0.0</graphql.extended.scalars.version>
+		<mockserver.client.java.version>5.5.4</mockserver.client.java.version>
+		<tomcat.embed.version>9.0.45</tomcat.embed.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.tngtech.archunit</groupId>
+			<artifactId>archunit-junit4</artifactId>
+			<version>${archunit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-mock</artifactId>
+			<version>${spring.mock.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version>
+			<scope>runtime</scope>
+		</dependency>
+
+
+		<!-- ####### GRAPHQL dependencies ####### -->
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>graphql-spring-boot-starter</artifactId>
+			<version>${graphql.kickstart.version}</version>
+		</dependency>
+		<!-- GraphQL testing facilities -->
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>graphql-spring-boot-starter-test</artifactId>
+			<version>${graphql.kickstart.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- GraphQL playground -->
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>playground-spring-boot-starter</artifactId>
+			<version>${graphql.kickstart.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>graphql-kickstart-spring-support</artifactId>
+			<version>${graphql.kickstart.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-java-extended-scalars</artifactId>
+			<version>${graphql.extended.scalars.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-java-extended-validation</artifactId>
+			<version>15.0.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>jakarta.el</artifactId>
+					<groupId>org.glassfish</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>mockserver</artifactId>
+			<version>${testcontainers.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -46,23 +128,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-groovy-templates</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -103,15 +168,40 @@
 			<version>${spock.spring.version}</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>mongodb</artifactId>
+			<version>${testcontainers.mongodb.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mock-server</groupId>
+			<artifactId>mockserver-client-java</artifactId>
+			<version>${mockserver.client.java.version}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>

@@ -1,0 +1,18 @@
+type Category {
+    id: UUID!
+    name: String!
+    description: String!
+    helpText: String
+    createdAt: DateTime
+    updatedAt: DateTime
+}
+
+# Input to create new category
+input CreateCategoryInput {
+    # Category Name
+    name: String!
+    # Category Description
+    description: String!
+    # Category Help text
+    helpText: String
+}

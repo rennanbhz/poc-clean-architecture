@@ -1,9 +1,11 @@
 package com.poccleanarch.business.model;
 
 import java.time.OffsetDateTime;
+import javax.persistence.Id;
 
 public class Category {
 
+    @Id private String objectId;
     private String id;
     private String name;
     private String description;
@@ -14,18 +16,23 @@ public class Category {
     public Category() {
     }
 
-    public Category(String id,
-        String name,
-        String description,
-        String helpText,
-        OffsetDateTime createdAt,
-        OffsetDateTime updatedAt) {
+    public Category(String objectId, String id, String name, String description,
+        String helpText, OffsetDateTime createdAt, OffsetDateTime updatedAt) {
+        this.objectId = objectId;
         this.id = id;
         this.name = name;
         this.description = description;
         this.helpText = helpText;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+    }
+
+    public String getObjectId() {
+        return objectId;
+    }
+
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
     }
 
     public String getId() {

@@ -1,0 +1,5 @@
+extend type Mutation {
+    # Create new category
+    createCategory(input: CreateCategoryInput! ): Category!
+}
+
