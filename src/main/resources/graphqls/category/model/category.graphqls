@@ -1,10 +1,10 @@
 type Category {
-    id: UUID!
+    id: String!
     name: String!
     description: String!
     helpText: String
-    createdAt: DateTime
-    updatedAt: DateTime
+    createdAt: String
+    updatedAt: String
 }
 
 # Input to create new category

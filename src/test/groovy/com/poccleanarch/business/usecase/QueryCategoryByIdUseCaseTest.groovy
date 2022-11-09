@@ -9,13 +9,13 @@ import groovy.transform.CompileDynamic
 import spock.lang.Specification
 
 @CompileDynamic
-class GetCategoryUseCaseTest extends Specification {
+class QueryCategoryByIdUseCaseTest extends Specification {
 
-    GetCategoryUseCase getCategoryUseCase
+    QueryCategoryByIdUseCase getCategoryUseCase
     CategoryRepository categoryRepository = Mock()
 
     void setup() {
-        getCategoryUseCase = new GetCategoryUseCase(categoryRepository)
+        getCategoryUseCase = new QueryCategoryByIdUseCase(categoryRepository)
     }
 
     void "It should return the AbstractAttribute when getting by Id"() {

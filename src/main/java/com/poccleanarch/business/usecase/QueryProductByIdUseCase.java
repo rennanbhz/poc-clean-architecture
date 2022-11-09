@@ -7,14 +7,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GetProductUseCase {
+public class QueryProductByIdUseCase {
 
   private static final Logger LOGGER =
-      LoggerFactory.getLogger(GetProductUseCase.class);
+      LoggerFactory.getLogger(QueryProductByIdUseCase.class);
 
   private final ProductRepository productRepository;
 
-  public GetProductUseCase(
+  public QueryProductByIdUseCase(
       ProductRepository productRepository) {
     this.productRepository = productRepository;
   }

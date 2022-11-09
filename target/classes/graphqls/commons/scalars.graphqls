@@ -1,5 +1,13 @@
 scalar DateTime
 scalar Date
+scalar JSON
 scalar Locale
 scalar Url
-scalar UUID
+scalar PositiveInt
+scalar NegativeInt
+scalar NonPositiveInt
+scalar NonNegativeInt
+scalar PositiveFloat
+scalar NegativeFloat
+scalar NonPositiveFloat
+scalar NonNegativeFloat

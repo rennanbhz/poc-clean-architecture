@@ -1,11 +1,11 @@
 type Product {
-    id: UUID!
+    id: String!
     name: String!
     categoryId: String!
     description: String!
     images: [String!]
-    createdAt: DateTime
-    updatedAt: DateTime
+    createdAt: String
+    updatedAt: String
 }
 
 # Input to create a new Product
@@ -13,7 +13,7 @@ input CreateProductInput {
     # Product Name
     name: String!
     # Product parent ID
-    categoryId: UUID
+    categoryId: String
     # Product Description
     description: String!
     # Product Images

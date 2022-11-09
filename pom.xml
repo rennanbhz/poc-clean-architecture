@@ -34,6 +34,7 @@
 		<log4j2.version>2.15.0</log4j2.version>
 		<graphql.kickstart.version>8.1.1</graphql.kickstart.version>
 		<graphql.extended.scalars.version>15.0.0</graphql.extended.scalars.version>
+		<graphql-java-extended-validation>15.0.1</graphql-java-extended-validation>
 		<mockserver.client.java.version>5.5.4</mockserver.client.java.version>
 		<tomcat.embed.version>9.0.45</tomcat.embed.version>
 	</properties>
@@ -77,6 +78,15 @@
 			<artifactId>graphql-spring-boot-starter</artifactId>
 			<version>${graphql.kickstart.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-java-servlet -->
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-java-servlet</artifactId>
+			<version>4.7.0</version>
+		</dependency>
+
+
 		<!-- GraphQL testing facilities -->
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>

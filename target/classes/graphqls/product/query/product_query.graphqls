@@ -1,4 +1,4 @@
 extend type Query {
     # Get a Product by ID
-    product(id: UUID!): Product!
+    product(id: String!): Product!
 }

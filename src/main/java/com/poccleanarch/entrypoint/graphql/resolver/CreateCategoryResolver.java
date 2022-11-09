@@ -13,7 +13,7 @@ import org.springframework.validation.annotation.Validated;
 
 @Component
 @Validated
-public class CreateCategoryResolver implements GraphQLMutationResolver {
+public class CreateCategoryResolver implements GraphQLMutationResolver{
 
   private static final Logger LOGGER = LoggerFactory.getLogger(CreateCategoryResolver.class);
 

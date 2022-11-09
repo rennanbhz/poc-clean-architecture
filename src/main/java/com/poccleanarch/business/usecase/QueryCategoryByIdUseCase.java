@@ -7,14 +7,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GetCategoryUseCase {
+public class QueryCategoryByIdUseCase {
 
   private static final Logger LOGGER =
-      LoggerFactory.getLogger(GetCategoryUseCase.class);
+      LoggerFactory.getLogger(QueryCategoryByIdUseCase.class);
 
   private final CategoryRepository categoryRepository;
 
-  public GetCategoryUseCase(
+  public QueryCategoryByIdUseCase(
       CategoryRepository categoryRepository) {
     this.categoryRepository = categoryRepository;
   }

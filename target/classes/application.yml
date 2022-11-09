@@ -17,3 +17,20 @@ spring:
         boot:
           autoconfigure:
             jdbc: DataSourceAutoConfiguration
+
+graphql.playground:
+  mapping: /playground
+  endpoint: /graphql
+  enabled: true
+  pageTitle: Playground
+  cdn:
+    enabled: true
+    version: latest
+  settings:
+    request.credentials: omit
+    schema.polling.enable: false
+
+# Logs
+logging:
+  level:
+    ROOT: ${LOG_ROOT_LEVEL:INFO}
